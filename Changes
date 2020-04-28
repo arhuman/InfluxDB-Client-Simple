@@ -1,0 +1,10 @@
+Revision history for InfluxDB-Client
+
+0.01    2020-04-27
+        First version, barely tested.
+
+0.02    2020-04-28
+        - Fix POD issues
+        - Add some POD documentation
+        - Minor API changes
+
