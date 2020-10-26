@@ -1,5 +1,8 @@
 Revision history for InfluxDB-Client
 
+0.06    2020-10-26
+        - Enhance client unit test
+
 0.05    2020-10-26
         - Fix bug with perl 5.16.3 when using defined without parens
 

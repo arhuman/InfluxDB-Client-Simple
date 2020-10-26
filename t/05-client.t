@@ -14,5 +14,7 @@ my $client;
 eval { $client = $class->new };
 ok(!$@, " $class can create default instance\n$@");
 
-like (warnings {$ client = $class->new}, qr//, " $class produce no warnings");
+ok(!warnings {$ client = $class->new}, " $class produce no warnings");
 isa_ok $client, $class;
+
+done_testing();
