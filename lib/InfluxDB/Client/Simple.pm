@@ -16,11 +16,11 @@ InfluxDB::Client::Simple - The lightweight InfluxDB client
 
 =head1 VERSION
 
-Version 0.04
+Version 0.05
 
 =cut
 
-our $VERSION = '0.04';
+our $VERSION = '0.05';
 
 =head1 SYNOPSIS
 
@@ -108,7 +108,7 @@ sub new {
                  timeout  => 180,
                  @_,
     );
-    my ( $host, $port, $protocol, $strict_udp, $timeout ) = map { defined?lc:'' } @args{ 'host', 'port', 'protocol', 'strict_udp', 'timeout' };
+    my ( $host, $port, $protocol, $strict_udp, $timeout ) = map { defined($_)?lc($_):'' } @args{ 'host', 'port', 'protocol', 'strict_udp', 'timeout' };
 
     my $self = { host => $host,
                  port => $port,
